@@ -1,13 +1,12 @@
 <!--
  * @Author: QHGG
  * @Date: 2022-05-07 17:24:57
- * @LastEditTime: 2022-08-22 18:08:39
+ * @LastEditTime: 2022-08-22 18:17:11
  * @LastEditors: QHGG
  * @Description: 
  * @FilePath: /AlphaDrug/README.md
 -->
 ## AlphaDrug — Official PyTorch Implementation
----
 
 Traditional drug discovery is very laborious, expensive, and time-consuming, due to the huge combinatorial complexity of the discrete molecular search space. Researchers have turned to machine learning methods for help to tackle this difficult problem. However, most existing methods are either virtual screening on the available database of compounds by protein-ligand affinity prediction, or unconditional molecular generation which does not take into account the information of the protein target. 
 In this paper, we propose a protein target-oriented de novo drug design method, called AlphaDrug. Our method is able to automatically generate molecular drug candidates in an autoregressive way, and the drug candidates can dock into the given target protein well. To fulfill this goal, we devise a modified transformer network for the joint embedding of protein target and the molecule, and a Monte Carlo Tree Search (MCTS) algorithm for the conditional molecular generation. In the transformer variant, we impose a hierarchy of skip connections from protein encoder to molecule decoder for efficient feature transfer.
@@ -18,7 +17,6 @@ Specific De Novo Molecular Generation**
 
 
 ## Resources
----
 
 
 #### Supplementary material related to our paper is available via the following links:
@@ -26,7 +24,6 @@ Specific De Novo Molecular Generation**
 - Google Drive: [Supplementary Material](https://drive.google.com/drive/folders/1myoeLdsOYz8mSvYEhSdMfUszUJlaJR3u?usp=sharing)
 
 ## Datasets
----
 
 - [train-val-data.tsv](https://drive.google.com/drive/folders/1myoeLdsOYz8mSvYEhSdMfUszUJlaJR3u?usp=sharing): It contains all sequence pairs for training and validation.
 
@@ -36,7 +33,6 @@ Specific De Novo Molecular Generation**
 
 
 ## Requirements
----
 
 ### Here we list several key packages as follows:
 | Name | Version | Build | Channel |
@@ -52,7 +48,6 @@ Specific De Novo Molecular Generation**
 | biopython | 1.79 | pypi_0 | pypi |
 
 ## Model Training
----
 
 - Before training, please download [train-val-data.tsv](https://drive.google.com/drive/folders/1myoeLdsOYz8mSvYEhSdMfUszUJlaJR3u?usp=sharing) to the data folder.
 
@@ -70,7 +65,6 @@ Specific De Novo Molecular Generation**
     ```
 
 ## Pretrained Model
----
 
 ### We provide three pretrained models, i.e., LT, T and TE, as follows:
 | Model  | Path |
@@ -80,7 +74,6 @@ Specific De Novo Molecular Generation**
 | Transformer Encoder | ./experiment/TE/model/30.pt|
 
 ## Run Beam Search (BS)
----
 
 ### There are several key args for BS listed as follows:
 | Argument | Description | Default | Type |
@@ -96,7 +89,6 @@ python beamsearch.py -k 0 -bs 10 -p LT
 ```
 
 ## Run Monte Carlo Tree Search (MCTS)
----
 
 ### There are several key args for MCTS listed as follows:
 | Argument | Description | Default | Type |
