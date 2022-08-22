@@ -1,7 +1,7 @@
 '''
 Author: QHGG
 Date: 2021-11-03 22:40:24
-LastEditTime: 2022-08-22 17:02:07
+LastEditTime: 2022-08-22 18:21:54
 LastEditors: QHGG
 Description: dataloader with coords
 FilePath: /AlphaDrug/utils/baseline.py
@@ -107,7 +107,7 @@ def prepareData(config, orign):
     data = pd.read_csv('./data/train-val-data.tsv', sep = '\t')
 
     # 小样本测试
-    slices = [i for i in slices if i < 1000]
+    # slices = [i for i in slices if i < 1000]
     
     data = data.loc[slices]
     smiArr = data['smiles'].apply(splitSmi).tolist()
