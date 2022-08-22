@@ -1,0 +1,26 @@
+.vscode
+__pycache__
+*/__pycache__
+**/*.pyc
+data/archived_test_pdbs
+data/index
+data/orign_pdbs
+data/archived_test_pdbs
+data/readme
+data/refined-set
+data/v2020-other-PL
+data/PDBbind*
+
+data/train-val-data.tsv
+data/data_config.json
+# decoy_100pdbs
+*.smi
+# mcts*
+# bs*
+# data/
+.ipynb_checkpoints
+data.sh
+tmps
+gv
+sbdd
+# !test_pdbs
