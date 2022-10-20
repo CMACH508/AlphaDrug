@@ -1,7 +1,7 @@
 <!--
  * @Author: QHGG
  * @Date: 2022-05-07 17:24:57
- * @LastEditTime: 2022-08-22 18:17:11
+ * @LastEditTime: 2022-10-20 17:48:21
  * @LastEditors: QHGG
  * @Description: 
  * @FilePath: /AlphaDrug/README.md
@@ -103,3 +103,24 @@ python beamsearch.py -k 0 -bs 10 -p LT
 cd your_project_path
 python mcts.py -k 0 -st 50 -p LT --max
 ```
+
+## Citation
+
+If you find this repo useful, please cite our paper:
+
+    @article{10.1093/pnasnexus/pgac227,
+    author = {Qian, Hao and Lin, Cheng and Zhao, Dengwei and Tu, Shikui and Xu, Lei},
+    title = "{AlphaDrug: Protein target specific de novo molecular generation}",
+    journal = {PNAS Nexus},
+    year = {2022},
+    month = {10},
+    abstract = "{Traditional drug discovery is very laborious, expensive, and time-consuming, due to the huge combinatorial complexity of the discrete molecular search space. Researchers have turned to machine learning methods for help to tackle this difficult problem. However, most existing methods are either virtual screening on the available database of compounds by protein-ligand affinity prediction, or unconditional molecular generation which does not take into account the information of the protein target. In this paper, we propose a protein target-oriented de novo drug design method, called AlphaDrug. Our method is able to automatically generate molecular drug candidates in an autoregressive way, and the drug candidates can dock into the given target protein well. To fulfill this goal, we devise a modified transformer network for the joint embedding of protein target and the molecule, and a Monte Carlo Tree Search (MCTS) algorithm for the conditional molecular generation. In the transformer variant, we impose a hierarchy of skip connections from protein encoder to molecule decoder for efficient feature transfer. The transformer variant computes the probabilities of next atoms based on the protein target and the molecule intermediate. We use the probabilities to guide the look-ahead search by MCTS to enhance or correct the next-atom selection. Moreover, MCTS is also guided by a value function implemented by a docking program, such that the paths with many low docking values are seldom chosen. Experiments on diverse protein targets demonstrate the effectiveness of our methods, indicating that AlphaDrug is a potentially promising solution to target-specific de novo drug design.}",
+    issn = {2752-6542},
+    doi = {10.1093/pnasnexus/pgac227},
+    url = {https://doi.org/10.1093/pnasnexus/pgac227},
+    note = {pgac227},
+    eprint = {https://academic.oup.com/pnasnexus/advance-article-pdf/doi/10.1093/pnasnexus/pgac227/46375778/pgac227.pdf},
+}
+
+## Contact
+If you have any question, please contact us: <a href="mailto:qhonearth@sjtu.edu.cn">qhonearth@sjtu.edu.cn</a>
